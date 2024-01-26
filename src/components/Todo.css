@@ -1,0 +1,40 @@
+.block-task-list {
+    display: grid;
+    grid-template: 1fr / 30px 94% 30px;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgb(243, 220, 220);
+    border: 2px solid rgb(255, 133, 133);
+    border-radius: 10px;
+    font-size: 22px;
+    box-shadow: 2px 2px 8px black;
+    color: rgb(120, 50, 50);
+    padding: 10px 10px;
+    margin: 30px;
+}
+
+.checkbox {
+    width: 26px;
+    height: 26px;
+}
+
+.title {
+ background-color: rgb(227, 227, 227);
+ border: 2px solid rgb(255, 133, 133);
+ margin-right: 10px;
+ margin-left:  10px;
+ border-radius: 10px;
+ overflow-x: scroll;
+ height: 42px;
+}
+
+.delete  {
+    background-color: rgb(243, 220, 220);
+    border: 2px solid rgb(255, 133, 133);
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 2px 2px 8px black;
+    color: rgb(120, 50, 50);
+    width: 30px;
+    height: 30px;
+}
