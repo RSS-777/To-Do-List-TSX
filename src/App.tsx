@@ -6,7 +6,22 @@ import './App.css';
 const App: FC = () => {
   const [value, setValue] = useState('');
   const [todos, setTodos] = useState<ITodo[]>([]);
+  const [lastElement, setLastElement] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  
+  useEffect(() => {
+    const savedTodosString = localStorage.getItem('ToDo');
+    const savedTodos: ITodo[] | null = savedTodosString ? JSON.parse(savedTodosString) : null;
+    if (savedTodos && savedTodos.length !== todos.length) {
+      setTodos(savedTodos)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (todos.length !== 0 || lastElement) {
+      localStorage.setItem('ToDo', JSON.stringify(todos))
+    }
+  }, [todos])
 
   const addTodo = () => {
     setTodos([...todos, {
@@ -27,6 +42,7 @@ const App: FC = () => {
 
   const removeTodo = (id: number): void => {
     setTodos(todos.filter(todo => todo.id !== id))
+    todos.length === 1 ? setLastElement(true) : setLastElement(false);
   };
 
   const toggleTodo = (id: number): void => {
