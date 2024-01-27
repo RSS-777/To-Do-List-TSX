@@ -1,6 +1,7 @@
-import { FC } from "react"
-import { ITodo } from "../types/data"
-import './Todo.css'
+import { FC } from "react";
+import { ITodo } from "../types/data";
+import './Todo.css';
+
 interface ITodoItem extends ITodo {
     removeTodo: (id: number) => void;
     toggleTodo: (id: number) => void;

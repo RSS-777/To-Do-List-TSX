@@ -1,47 +1,98 @@
-body, html {
-    margin: 0;
-    padding: 0;
-  }
-  
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 main {
-  background-image: linear-gradient( 45deg, rgb(223, 138, 138) , rgb(236, 236, 99));
+  background-image: linear-gradient(45deg, rgb(223, 138, 138), rgb(236, 236, 99));
   min-height: 100vh;
   margin: 0;
   padding-bottom: 10px;
 }
 
-h1 { 
-    color: rgb(144, 1, 1);
-    text-align: center;
-    text-shadow: 4px 4px 12px black;
-    margin-top: 0;
-    margin-bottom: 30px;
-    padding-top: 40px;
+h1 {
+  color: rgb(144, 1, 1);
+  text-align: center;
+  text-shadow: 4px 4px 12px black;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 40px;
 }
 
 .add-todo-block {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  z-index: 2;
+  position: relative;
 }
 
 .add-todo-block input {
-    background-color: rgb(243, 220, 220);
-    border: 2px solid rgb(255, 133, 133);
-    border-radius: 10px;
-    font-size: 22px;
-    box-shadow: 2px 2px 8px black;
-    color: rgb(120, 50, 50);
-    padding: 4px 6px;
+  background-color: rgb(243, 220, 220);
+  border: 2px solid rgb(255, 133, 133);
+  border-radius: 10px;
+  font-size: 22px;
+  box-shadow: 2px 2px 8px black;
+  color: rgb(120, 50, 50);
+  padding: 4px 6px;
 }
 
 .add-todo-block button {
-    background-color: rgb(243, 220, 220);
-    border: 2px solid rgb(255, 133, 133);
-    border-radius: 10px;
-    margin-left: 6px;
-    font-size: 22px;
-    box-shadow: 2px 2px 8px black;
-    color: rgb(120, 50, 50);
-    padding: 4px 10px;
+  background-color: rgb(243, 220, 220);
+  border: 2px solid rgb(255, 133, 133);
+  border-radius: 10px;
+  margin-left: 6px;
+  font-size: 22px;
+  box-shadow: 2px 2px 8px black;
+  color: rgb(120, 50, 50);
+  padding: 4px 10px;
+}
+
+p {
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  font-size: 5rem;
+  font-weight: 900;
+  font-style: italic;
+  transform: rotateZ(-45deg) translate(10%, -40%);
+  margin: 20px;
+  color: rgb(220, 137, 137);
+  text-shadow: 4px 4px 12px black;
+  opacity: 0.4;
+}
+
+@media (max-width: 776px) {
+  p {
+    font-size: 4rem;
+    font-weight: 900;
+    transform: rotateZ(-45deg) translate(-10%, -60%);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .add-todo-block input {
+    font-size: 18px;
+  }
+
+  .add-todo-block button {
+    font-size: 18px;
+  }
+
+  main {
+    min-width: 330px;
+  }
+
+  p {
+    font-size: 3rem;
+    font-weight: 900;
+    transform: rotateZ(-45deg) translate(-30%, -60%);
+  }
 }

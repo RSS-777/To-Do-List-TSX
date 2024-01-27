@@ -8,7 +8,7 @@ const App: FC = () => {
   const [todos, setTodos] = useState<ITodo[]>([]);
   const [lastElement, setLastElement] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  
+
   useEffect(() => {
     const savedTodosString = localStorage.getItem('ToDo');
     const savedTodos: ITodo[] | null = savedTodosString ? JSON.parse(savedTodosString) : null;
@@ -22,6 +22,10 @@ const App: FC = () => {
       localStorage.setItem('ToDo', JSON.stringify(todos))
     }
   }, [todos])
+
+  useEffect(() => {
+    inputRef.current?.focus()
+  }, [])
 
   const addTodo = () => {
     setTodos([...todos, {
@@ -55,10 +59,6 @@ const App: FC = () => {
     }))
   };
 
-  useEffect(() => {
-    inputRef.current?.focus()
-  }, [])
-
   return (
     <main>
       <h1>List To-Do (React-TSX)</h1>
@@ -76,6 +76,7 @@ const App: FC = () => {
         removeTodo={removeTodo}
         toggleTodo={toggleTodo}
       />
+      <p>Programming is easy! <br /> If you like it!!!</p>
     </main>
   );
 }
