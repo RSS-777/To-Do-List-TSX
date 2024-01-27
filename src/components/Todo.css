@@ -69,7 +69,7 @@
 
 @media (max-width: 480px) {
     .block-task-list {
-        grid-template: 20px / 30px 78% 26px;
+        grid-template: auto / 30px 78% 26px;
         margin: 10px;
         font-size: 18px;
         padding: 10px 10px;
