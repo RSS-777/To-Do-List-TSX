@@ -9,7 +9,7 @@ Tasks are saved in local storage.
 * [X] **TSX**: This project is developed using *TypeScript* to facilitate development and ensure high code quality..
 
 ___
-[Link to the site with the *ToDo List*]()
+[Link to the site with the *ToDo List*](https://rss-777.github.io/To-Do-List-TSX/)
 
 ___
 ### Screenshot
