@@ -53,13 +53,12 @@ p {
   text-align: center;
   position: absolute;
   z-index: 1;
-  top: 50%;
-  left: 50%;
-  font-size: 5rem;
+  top: 35%;
+  right: -20px;
+  font-size: 4rem;
   font-weight: 900;
   font-style: italic;
-  transform: rotateZ(-45deg) translate(10%, -40%);
-  margin: 20px;
+  transform: rotateZ(-45deg);
   color: rgb(220, 137, 137);
   text-shadow: 4px 4px 12px black;
   opacity: 0.4;
@@ -67,9 +66,9 @@ p {
 
 @media (max-width: 776px) {
   p {
-    font-size: 4rem;
-    font-weight: 900;
-    transform: rotateZ(-45deg) translate(-10%, -60%);
+    top: 45%;
+    right: -10px;
+    font-size: 3rem;
   }
 }
 
@@ -91,8 +90,8 @@ p {
   }
 
   p {
-    font-size: 3rem;
-    font-weight: 900;
-    transform: rotateZ(-45deg) translate(-30%, -60%);
+    top: 40%;
+    right: 5px;
+    font-size: 2.4rem;
   }
 }
