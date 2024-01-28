@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/To-Do-List-TSX/static/css/main.8df0c6dd.css",
+    "main.css": "/To-Do-List-TSX/static/css/main.e71ae716.css",
     "main.js": "/To-Do-List-TSX/static/js/main.0eeb7ee8.js",
     "index.html": "/To-Do-List-TSX/index.html",
-    "main.8df0c6dd.css.map": "/To-Do-List-TSX/static/css/main.8df0c6dd.css.map",
+    "main.e71ae716.css.map": "/To-Do-List-TSX/static/css/main.e71ae716.css.map",
     "main.0eeb7ee8.js.map": "/To-Do-List-TSX/static/js/main.0eeb7ee8.js.map"
   },
   "entrypoints": [
-    "static/css/main.8df0c6dd.css",
+    "static/css/main.e71ae716.css",
     "static/js/main.0eeb7ee8.js"
   ]
 }
